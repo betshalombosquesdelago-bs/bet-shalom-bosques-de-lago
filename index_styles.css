@@ -982,21 +982,20 @@ display:none;
     }
 
     .hero-logo{
-        width:170px;
+        width:150px;
     }
 
     .slogan{
         margin-top:18px;
-        font-size: 10px;
     }
 
     .slogan h2{
-        margin:0;
+        margin:10px;
     }
 
     .slogan h2 span{
 
-        font-size:22px;
+        font-size:15px;
         line-height:1.4;
         letter-spacing:1px;
         padding:0;
