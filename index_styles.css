@@ -84,7 +84,7 @@ height:50px;
 
 .logo img:hover{
     transition: 2s;
-    transform: scale(1.5);
+    transform: scale(1.25);
 }
 
 nav a{
@@ -987,7 +987,7 @@ display:none;
 
     .slogan{
         margin-top:18px;
-        font-size: 15px;
+        font-size: 10px;
     }
 
     .slogan h2{
