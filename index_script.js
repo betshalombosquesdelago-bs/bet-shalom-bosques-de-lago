@@ -1,3 +1,7 @@
+//==================================================
+// HERO SLIDER
+//==================================================
+
 const slides = document.querySelectorAll(".slide");
 
 let current = 0;
@@ -20,26 +24,31 @@ function slider(){
 
 setInterval(slider,5000);
 
-const reveals = document.querySelectorAll(".reveal");
 
-function revealOnScroll(){
+//==================================================
+// REVEAL ANIMATIONS
+//==================================================
 
-    const windowHeight = window.innerHeight;
+const observer = new IntersectionObserver((entries)=>{
 
-    reveals.forEach(item=>{
+    entries.forEach(entry=>{
 
-        const top = item.getBoundingClientRect().top;
+        if(entry.isIntersecting){
 
-        if(top < windowHeight - 120){
+            entry.target.classList.add("show");
 
-            item.classList.add("active");
+            observer.unobserve(entry.target);
 
         }
 
     });
 
-}
+},{
+    threshold:.15
+});
 
-window.addEventListener("scroll", revealOnScroll);
+document.querySelectorAll(".animate").forEach(element=>{
 
-revealOnScroll();
+    observer.observe(element);
+
+});
