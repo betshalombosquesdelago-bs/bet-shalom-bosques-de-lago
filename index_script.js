@@ -52,3 +52,44 @@ document.querySelectorAll(".animate").forEach(element=>{
     observer.observe(element);
 
 });
+
+
+//==================================================
+// CARRUSEL DE EVENTOS
+//==================================================
+
+const sliderEvents = document.querySelector(".events-slider");
+
+const btnNext = document.querySelector(".events-next");
+
+const btnPrev = document.querySelector(".events-prev");
+
+const card = document.querySelector(".event-card");
+
+const gap = 30; // mismo gap del CSS
+
+const scrollAmount = card.offsetWidth + gap;
+
+btnNext.addEventListener("click",()=>{
+
+    sliderEvents.scrollBy({
+
+        left:scrollAmount,
+
+        behavior:"smooth"
+
+    });
+
+});
+
+btnPrev.addEventListener("click",()=>{
+
+    sliderEvents.scrollBy({
+
+        left:-scrollAmount,
+
+        behavior:"smooth"
+
+    });
+
+});

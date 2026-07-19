@@ -1847,9 +1847,9 @@ Container
 
     overflow-x:auto;
 
-    padding-bottom:20px;
-
     scroll-behavior:smooth;
+
+    scroll-snap-type:x mandatory;
 
     scrollbar-width:none;
 
@@ -1886,6 +1886,8 @@ Container
     box-shadow:
 
     0 20px 50px rgba(0,60,120,.08);
+
+    scroll-snap-align:start;
 
 }
 
