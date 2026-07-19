@@ -65,7 +65,13 @@ z-index:1000;
 
 box-shadow:
 0 10px 30px rgba(0,0,0,.05);
+border-bottom: 5px solid #0D5ED9;
 
+}
+
+header:hover{
+    border-bottom: 5px solid #ffd500;
+    transition: 0.35s;
 }
 
 header .container{
@@ -339,13 +345,11 @@ object-fit:cover;
 
     linear-gradient(
 
-        130deg,
+        0deg,
 
-        rgba(0,63,176,.78),
+        rgba(0,63,176,1),
 
-        rgba(17,103,228,.55),
-
-        rgba(30,146,255,.45)
+        rgba(17,103,228,0)
 
     );
 
@@ -792,7 +796,7 @@ forwards
     padding: 120px 8%;
     background: linear-gradient(
         180deg,
-        #329FEA 0%,
+        rgba(0,63,176,1) 0%,
         #6FC2F6 35%,
         #EAF7FF 70%,
         #FFFFFF 100%
@@ -855,10 +859,9 @@ forwards
 .about h2{
     width:100%;
     max-width:1000px;
-
+    color: rgb(255, 255, 255);
     font-size:3.2rem;
     line-height:1.15;
-    color:#083D67;
     margin-bottom:25px;
 
 }
@@ -868,7 +871,7 @@ forwards
     width:100%;
     font-size:1.15rem;
     line-height:1.9;
-    color:#31546D;
+    color:#142f42;
     margin-bottom:60px;
 
 }
@@ -981,45 +984,6 @@ forwards
 
 }
 
-/*==================================================
-                BOTON
-==================================================*/
-
-.about-btn{
-
-    display:inline-block;
-
-    margin-top:35px;
-
-    padding:18px 42px;
-
-    border-radius:60px;
-
-    background:linear-gradient(
-        135deg,
-        #0B73D5,
-        #38B6FF
-    );
-
-    color:white;
-    text-decoration:none;
-    font-weight:700;
-
-    transition:.35s;
-
-    box-shadow:
-    0 18px 35px rgba(18,115,214,.28);
-
-}
-
-.about-btn:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:
-    0 22px 40px rgba(18,115,214,.38);
-
-}
 
 .about-cards{
 
@@ -1043,11 +1007,74 @@ forwards
 
     position:relative;
 
+    overflow:hidden;
+
     padding:130px 8%;
 
     background:#ffffff;
 
-    overflow:hidden;
+    z-index:1;
+
+}
+
+
+/*=============================
+        LUCES DECORATIVAS
+==============================*/
+
+.services::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    top:-250px;
+    right:-180px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(33, 255, 166, 0.55) 0%,
+        rgba(169,255,220,.28) 45%,
+        rgba(169,255,220,0) 75%
+    );
+
+    filter:blur(60px);
+
+    z-index:-1;
+
+}
+
+.services::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+    height:550px;
+
+    left:-220px;
+    bottom:-220px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(75, 186, 255, 0.5) 0%,
+        rgba(135,210,255,.25) 45%,
+        rgba(135,210,255,0) 75%
+    );
+
+    filter:blur(70px);
+
+    z-index:-1;
 
 }
 
@@ -1089,7 +1116,7 @@ forwards
 
     line-height:1.15;
 
-    color:#073C69;
+    color:rgb(15, 91, 87);
 
     margin-bottom:28px;
 
@@ -1179,8 +1206,8 @@ forwards
 
     linear-gradient(
         145deg,
-        #0D73D8,
-        #54BBFF
+        #0a9f63,
+        #54ffb8
     );
 
     color:white;
@@ -1189,7 +1216,7 @@ forwards
 
     box-shadow:
 
-    0 16px 35px rgba(10,116,216,.30);
+    0 16px 35px rgba(10, 216, 103, 0.3);
 
 }
 
@@ -1230,8 +1257,8 @@ forwards
 
     linear-gradient(
         90deg,
-        #0D73D8,
-        #5EC4FF
+        #0a9f63,
+        #54ffb8
     );
 
     margin-bottom:22px;
@@ -1294,7 +1321,8 @@ forwards
     background:
     linear-gradient(
         180deg,
-        #F9FCFF 0%,
+        rgba(135,210,255,.50) 0%,
+        #FFFFFF 100%,
         #FFFFFF 100%
     );
 
@@ -2122,6 +2150,413 @@ Container
     transform:translateY(-4px);
 
 }
+
+/*==================================================
+                    CONTACTO
+==================================================*/
+
+.contact{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:140px 8%;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #0E66D8 0%,
+        #2E9EF0 45%,
+        #52D0B4 100%
+    );
+
+    border-radius:90px 90px 0 0;
+
+}
+
+.contact-light{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(140px);
+
+    opacity:.22;
+
+    pointer-events:none;
+
+}
+
+.contact .light-blue{
+
+    width:450px;
+    height:450px;
+
+    background:#8DD9FF;
+
+    top:-160px;
+    left:-120px;
+
+}
+
+.contact .light-green{
+
+    width:380px;
+    height:380px;
+
+    background:#8BFFD6;
+
+    bottom:-120px;
+    right:-100px;
+
+}
+
+.contact-container{
+
+    position:relative;
+
+    z-index:2;
+
+    width:min(1300px,92%);
+
+    margin:auto;
+
+}
+
+.contact h2{
+
+    max-width:700px;
+
+    margin-top:18px;
+    margin-bottom:25px;
+
+    font-size:3rem;
+
+    line-height:1.15;
+
+    color:white;
+
+}
+
+.contact>div>p,
+.contact-container>p{
+
+    max-width:760px;
+
+    font-size:1.1rem;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.9);
+
+    margin-bottom:70px;
+
+}
+
+.contact-wrapper{
+
+    display:grid;
+
+    grid-template-columns:
+
+    420px
+
+    1fr;
+
+    gap:60px;
+
+    align-items:start;
+
+}
+
+.contact-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+    margin-bottom:22px;
+
+    padding:26px;
+
+    border-radius:26px;
+
+    background:
+
+    rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    transition:.35s;
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-8px);
+
+    background:
+
+    rgba(255,255,255,.18);
+
+}
+
+.contact-icon{
+
+    width:72px;
+    height:72px;
+
+    flex-shrink:0;
+
+    border-radius:22px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    background:white;
+
+    color:#0E73D9;
+
+    font-size:28px;
+
+    box-shadow:
+
+    0 15px 30px rgba(0,0,0,.12);
+
+}
+
+.contact-card h3{
+
+    color:white;
+
+    font-size:1.3rem;
+
+    margin-bottom:8px;
+
+}
+
+.contact-card p{
+
+    color:rgba(255,255,255,.85);
+
+    line-height:1.8;
+
+}
+
+.contact-social{
+
+    margin-top:40px;
+
+}
+
+.contact-social h3{
+
+    color:white;
+
+    margin-bottom:25px;
+
+}
+
+.social-links{
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.social-links a{
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    background:
+
+    rgba(255,255,255,.18);
+
+    color:white;
+
+    font-size:22px;
+
+    transition:.35s;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.social-links a:hover{
+
+    background:white;
+
+    color:#0E73D9;
+
+    transform:
+
+    translateY(-6px)
+
+    rotate(8deg);
+
+}
+
+.contact-form{
+
+    padding:45px;
+
+    border-radius:35px;
+
+    background:
+
+    rgba(255,255,255,.15);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.20);
+
+}
+
+.contact-form h3{
+
+    color:white;
+
+    font-size:2rem;
+
+    margin-bottom:12px;
+
+}
+
+.contact-form p{
+
+    color:rgba(255,255,255,.88);
+
+    margin-bottom:35px;
+
+}
+
+.input-group{
+
+    margin-bottom:22px;
+
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+
+    width:100%;
+
+    padding:18px 22px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:18px;
+
+    background:
+
+    rgba(255,255,255,.85);
+
+    font-size:16px;
+
+    color:#17436B;
+
+    transition:.35s;
+
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus{
+
+    background:white;
+
+    box-shadow:
+
+    0 0 0 4px rgba(255,255,255,.25);
+
+}
+
+textarea{
+
+    resize:none;
+
+    min-height:180px;
+
+}
+
+.contact-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:18px 38px;
+
+    border:none;
+
+    border-radius:60px;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:#0C6ED8;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 18px 35px rgba(0,0,0,.18);
+
+}
+
+.contact-btn:hover{
+
+    transform:
+
+    translateY(-6px);
+
+    box-shadow:
+
+    0 28px 50px rgba(0,0,0,.22);
+
+}
+
+.contact-btn:hover i{
+
+    transform:translateX(6px);
+
+}
+
+.contact-btn i{
+
+    transition:.35s;
+
+}
+
+
 
 
 .animate{
@@ -3033,22 +3468,6 @@ display:none;
 
         font-size:.98rem;
         line-height:1.75;
-
-    }
-
-    /* Botón */
-
-    .about-btn{
-
-        display:block;
-
-        width:100%;
-
-        text-align:center;
-
-        padding:18px;
-
-        margin-top:30px;
 
     }
 
